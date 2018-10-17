@@ -44,7 +44,7 @@ all: JenkinsCPPPipeline
 JenkinsCPPPipeline: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"libraries" -o "JenkinsCPPPipeline" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"../libraries" -o "JenkinsCPPPipeline" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
