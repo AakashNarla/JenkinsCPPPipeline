@@ -38,19 +38,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: JenkinsCPPSample
+all: JenkinsCPPPipeline
 
 # Tool invocations
-JenkinsCPPSample: $(OBJS) $(USER_OBJS)
+JenkinsCPPPipeline: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/aakashnarla/Downloads/google_test_sample-master/libraries" -o "JenkinsCPPSample" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/aakashnarla/Downloads/JenkinsCPPPipeline/libraries" -o "JenkinsCPPPipeline" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) JenkinsCPPSample
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) JenkinsCPPPipeline
 	-@echo ' '
 
 .PHONY: all clean dependents
