@@ -38,13 +38,13 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: JenkinsCPPPipeline
+all: CPPSample
 
 # Tool invocations
 JenkinsCPPPipeline: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/var/jenkins_home/workspace/CPPSample/libraries" -o "JenkinsCPPPipeline" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/var/jenkins_home/workspace/CPPSample/libraries" -o "CPPSample" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
